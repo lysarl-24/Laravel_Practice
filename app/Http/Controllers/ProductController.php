@@ -21,8 +21,9 @@ class ProductController extends Controller
     // Create
     public function create()
     {
-        $categories = Category::all();
-        return view('products.create', compact('categories'));
+        // $categories = Category::all();
+        // return view('products.create', compact('categories'));
+        return view('products.create');
     }
 
     /**
@@ -46,7 +47,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('products.show');
     }
 
     /**
@@ -85,6 +86,9 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect('products');
     }
 }

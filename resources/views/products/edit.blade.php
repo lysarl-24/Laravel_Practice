@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Create Product</title>
+    <title>Edit Product</title>
 @endsection
 
 @section('content')

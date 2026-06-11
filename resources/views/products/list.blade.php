@@ -8,7 +8,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>
                     <th>Qty</th>
@@ -25,8 +25,14 @@
                         <td>{{ $product->qty }}</td>
                         <td>{{ $product->category->name }}</td>
                         <td>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#products{{ $product->id }}">
+                                <i class="fa-solid fa-eye text-success"></i>
+                            </a>
                             <a href="{{ route('products.edit', $product->id) }}">
                                 <i class="fa-solid fa-pen-to-square text-info"></i>
+                            </a>
+                            <a href="" data-bs-toggle="model" data-bs-target="#deleteProduct{{ $product->id }}">
+                                 <i class="fa-solid fa-trash text-danger"></i>
                             </a>
                         </td>
                     </tr>

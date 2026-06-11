@@ -1,4 +1,4 @@
-<div class="modal fade" id="category{{ $category->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="products{{ $product->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -9,11 +9,15 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ $category->name }}
+                        {{ $product->name }}
                     </div>
                     <div class="col-md-12">
-                        {{ $category->dec }}
+                        {{ $product->price }}
                     </div>
+                    <div class="col-md-12">
+                        {{ $product->qty }}
+                    </div>
+                    
                 </div>
             </div>
             <div class="modal-footer">
